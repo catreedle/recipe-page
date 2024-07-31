@@ -1,0 +1,139 @@
+:root {
+  --white: hsl(0, 0%, 100%);
+
+  --stone100: hsl(30, 54%, 90%);
+  --stone150: hsl(30, 18%, 87%);
+  --stone600: hsl(30, 10%, 34%);
+  --stone900: hsl(24, 5%, 18%);
+
+  --brown800: hsl(14, 45%, 36%);
+
+  --rose800: hsl(332, 51%, 32%);
+  --rose50: hsl(330, 100%, 98%);
+}
+
+@font-face {
+  font-family: "Young Serif";
+  src: url("../fonts/young-serif/YoungSerif-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("../fonts/outfit/Outfit-VariableFont_wght.ttf") format("truetype");
+  font-weight: 400, 600, 700;
+}
+
+html {
+  margin: 0;
+  height: 100%;
+  background-color: var(--stone100);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body {
+  background-color: var(--white);
+  width: 55%;
+  padding: 30px;
+  margin: 100px auto;
+  border-radius: 20px;
+  font-family: "Outfit", sans-serif;
+  color: var(--stone900);
+  font-weight: 400;
+  box-sizing: border-box;
+  line-height: 1.5;
+}
+
+h1,
+h2 {
+  font-family: "Young Serif", serif;
+}
+
+h3 {
+  color: var(--rose800);
+}
+
+header img {
+  width: 100%;
+}
+
+h2 {
+  color: var(--brown800);
+}
+
+.preparation-card {
+  background-color: var(--rose50);
+  padding: 10px;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--stone150);
+  margin: 20px 0; /* Adjusts spacing around the line */
+}
+
+ol,
+ul,
+li {
+  padding: 0;
+  margin: 0;
+}
+
+ol,
+ul,
+li {
+  padding-left: 20px;
+}
+
+ol li::marker,
+ul li::marker {
+  color: var(--brown800);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td {
+  padding: 15px;
+}
+
+tbody tr:not(:last-child) td {
+  border-bottom: 1px solid var(--stone150); /* Adds bottom border to cells */
+}
+
+.column-two {
+  color: var(--brown800);
+}
+
+@media (max-width: 375px) {
+  body {
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+  }
+
+  article,
+  h1 {
+    padding: 0 30px;
+  }
+
+  h3 {
+    margin: 0;
+  }
+
+  .preparation-card {
+    margin: 30px;
+  }
+}
+
+@media (min-width: 376px) and (max-width: 768px) {
+  body {
+    width: 90%;
+    padding: 20px;
+  }
+}
